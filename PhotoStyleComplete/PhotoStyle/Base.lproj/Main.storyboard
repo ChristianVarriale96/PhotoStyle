@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xuY-mV-tns">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StyleEffect-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoStyle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="7C1-K4-3kE">
+                                <rect key="frame" x="10" y="98" width="394" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="a00-aT-FlA"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zZL-PX-lsj">
+                                <rect key="frame" x="57" y="568" width="300" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-xf-Ky8" customClass="roundButton" customModule="PhotoStyle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KhT-Dd-o1M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Block Effect"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xm-O0-hbO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2An-6v-1jn" customClass="roundButton" customModule="PhotoStyle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="X2v-ia-rwX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Picasso Effect"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WH-wh-ZDM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAJ-pW-PNK" customClass="roundButton" customModule="PhotoStyle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Nvu-av-khD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Scream Effect"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Y6-EN-scZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMS-cg-9cZ" userLabel="Pick Image" customClass="roundButtonPickImage" customModule="PhotoStyle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Gui-yl-lGC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Pick Image"/>
+                                        <connections>
+                                            <action selector="pickImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cS2-7Y-alN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zZL-PX-lsj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="Dvr-2e-o0G"/>
+                            <constraint firstItem="zZL-PX-lsj" firstAttribute="centerX" secondItem="7C1-K4-3kE" secondAttribute="centerX" id="EQ9-dA-l37"/>
+                            <constraint firstItem="zZL-PX-lsj" firstAttribute="top" secondItem="7C1-K4-3kE" secondAttribute="bottom" constant="56" id="EWo-ar-PHy"/>
+                            <constraint firstItem="7C1-K4-3kE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="OnN-RB-fu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zZL-PX-lsj" secondAttribute="trailing" constant="57" id="UGS-gT-yhm"/>
+                            <constraint firstItem="7C1-K4-3kE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gfa-n9-X8X"/>
+                            <constraint firstItem="7C1-K4-3kE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="uEA-X1-oEA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="StyleEffect" id="keh-7z-sU4"/>
+                    <connections>
+                        <outlet property="blockButton" destination="FdD-xf-Ky8" id="Pxh-0P-4eX"/>
+                        <outlet property="imageView" destination="7C1-K4-3kE" id="jBI-Dd-wKe"/>
+                        <outlet property="picassoButton" destination="2An-6v-1jn" id="uLu-0R-YX3"/>
+                        <outlet property="screamButton" destination="EAJ-pW-PNK" id="jZJ-WW-FJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hwO-Sw-3Vd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xuY-mV-tns" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gzl-jY-qrG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VKb-1A-EeL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auv-kD-K6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeHolder" width="800" height="600"/>
+    </resources>
+</document>
